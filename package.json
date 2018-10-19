@@ -1,0 +1,26 @@
+{
+  "name": "newsapi",
+  "version": "1.0.0",
+  "description": "An application that stores atricles from popular news websites of various types ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piotr10111/newsAPI.git"
+  },
+  "keywords": [
+    "api",
+    "news",
+    "newsapi",
+    "articles",
+    "newspapper"
+  ],
+  "author": "Piotr Michalski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piotr10111/newsAPI/issues"
+  },
+  "homepage": "https://github.com/piotr10111/newsAPI#readme"
+}

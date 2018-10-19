@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header__container {
+    display: flex;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px 0 20px;
+}
+
+.header__nav {
+    margin-left: auto;
+
+}
+
+.header {
+    background-color: #111111;
+}
+
+.header__title {
+    margin-top: 30px;
+}
