@@ -5,10 +5,14 @@ const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const htmlmin = require("gulp-htmlmin");
 const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+
 
 sass.compiler = require('node-sass');
 
 const dist = 'dist'
+
+gulp.task('default', [ 'sass:watch','sass','html'])
 
 gulp.task('sass',  function() {
     return gulp.src('./src/scss/*.scss')
@@ -35,4 +39,9 @@ gulp.task('html', function() {
       .pipe(gulp.dest(dist));
   });
 
-gulp.task('default', [ 'sass:watch','sass','html'])
+gulp.task('image', () =>
+    gulp.src('src/images/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest(dist+'/images'))
+);
+

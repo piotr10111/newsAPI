@@ -8,6 +8,10 @@
     <title>Popular news</title>
     <link rel="stylesheet" href="dist/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Krub:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -18,12 +22,16 @@
 
             <h1 class="header__title" rel="index">
                 <a href="#" class="header__title-link" title="Strona główna">
-                    <img src="src/images/logo.png" alt="">
+                    <img class="header__logo" src="dist/images/logo.png" alt="">
                 </a>
             </h1>
 
             <a class="hamburger" aria-label="menu" aria-expanded="false" aria-controls="main-menu" tabindex="1" role="button"
                 type="button" name="menu">Menu</a>
+                
+            <a class="hamburger-close" href="">
+                <span class="fas fa-arrow-left"></span>
+            </a>
 
             <nav class="header__nav" role="menu">
                 <ul id="main-menu" class="nav__list">
@@ -51,10 +59,17 @@
     </header>
 
     <main id="main" class="content" role="main">
-        <div class="articles">
-        </div>
+
+        <section class="section section__top" id="top">
+            <div class="section__container">
+                <div class="articles">
+
+                </div>
+            </div>
+        </section>
+
     </main>
-    <script type='text/javascript' src='src/scripts/menu.js?v=" + Date.now() + "'></script>
+    <script type='text/javascript' src='src/scripts/index.js?v=" + Date.now() + "'></script>
 </body>
 
 </html>

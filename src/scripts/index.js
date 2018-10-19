@@ -1,7 +1,17 @@
+const hamburger = document.querySelector('.hamburger');
+const ul = document.querySelector('.header__nav');
+const hamburgerClose = document.querySelector('.hamburger-close');
 
+const click = hamburger.addEventListener('click', function (event) {
+    event ? event : event = window.event;
+    event.preventDefault();
+    this.style.display = "none";
+    ul.classList.toggle('visible');
+    hamburgerClose.style.visibility = "visible";
+});
 
 const apis = [
-    `https://newsapi.org/v2/top-headlines?country=pl&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
+    `https://newsapi.org/v2/top-headlines?country=de&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
     `https://newsapi.org/v2/top-headlines?country=pl&category=business&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
     `https://newsapi.org/v2/top-headlines?country=pl&category=sport&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
     `https://newsapi.org/v2/top-headlines?country=pl&category=technology&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
@@ -27,18 +37,18 @@ const reqFirst = fetch(apis[0])
              const post = document.querySelector('.articles');
             post.innerHTML += `
                 <article class="article">
-                    <figure> 
-                        <a href="${article.url}">
-                            <img src="${article.urlToImage}" alt="">
+                    <figure class="articles__figure"> 
+                        <a href="${article.url}" target="_blank">
+                            <img class="article__image" src="${article.urlToImage}" alt="">
                         </a>
                     </figure>
-                    <header>
+                    <!--<header>
                         <a href="${article.url}" 
                             <h3 class="article-title">${article.title}</h3>
                         </a>
-                        <a class="article-author" rel="author">Author: ${article.author}</a>
-                    </header>
-                    <p class="article-description">Description: ${article.description}</p>
+                        <a class="article-author" rel="author">${article.source.name}</a>
+                    </header>-->
+                    <!--<p class="article-description">Description: ${article.description}</p>-->
                 </article>`;
         });
     });
