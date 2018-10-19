@@ -1,11 +1,11 @@
 .hamburger {
     position: absolute;
     top: 40px;
-    right: 200px;
+    right: 400px;
     width: 40px;
     height: 31px;
     border: 0;
-    border-top: 3px solid #000;
+    border-top: 3px solid #fff;
     background: transparent;
     margin-right: 20px;
     z-index: 200;
@@ -19,7 +19,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        border-top: 3px solid #000;
+        border-top: 3px solid #fff;
         transform: translateY(10px);
     }
 
@@ -35,8 +35,8 @@
     border: 0;
     background: transparent;
     position: absolute;
-    top: 45px;
-    right: 200px;
+    top: 50px;
+    right: 400px;
     margin-right: 17px;
     padding: 0;
     &::before,
@@ -46,7 +46,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        border-top: 3px solid #000;
+        border-top: 3px solid #fff;
         -webkit-transform: rotate(45deg) translateY(5px);
                 transform: rotate(45deg) translateY(5px);
     }

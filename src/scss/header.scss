@@ -3,7 +3,7 @@
     top:0;
     width: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: #2B2B2B;
     -webkit-transition: .2 ease-in;
     transition: .2 ease-in;
 }
@@ -44,13 +44,122 @@
   }
   
   .nav__list--item {
-    margin-top: 50px;
-    -webkit-transition: margin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: margin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: black;
+    text-align: center;
+    list-style: none;
+    padding: 85px;
+    
   }
   .visible {
       visibility: visible;
+  }
+  
+  .nav--link {
+    color: white;
+    padding:  10px 20px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    
+  }
+
+  .nav__list {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    
+    .top {
+        background: url('../../dist/images/navigation/news.jpg');
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        z-index: 50;
+        &::before {
+            background-color:  rgba(255, 65, 54, .6);
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    .business {
+        background-image: url('../../dist/images/navigation/business.jpg');
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        z-index: 50;
+        &::before {
+            background-color: rgba(0, 31, 63, .6);
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    .sport {
+        background-image: url('../../dist/images/navigation/sport.jpg');
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        z-index: 50;
+        &::before {
+            background-color:  rgba(61, 153, 112, .6);
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    .tech {
+        background-image: url('../../dist/images/navigation/tech.jpg');
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        z-index: 50;
+        &::before {
+            background-color:  rgba(141, 7, 161, 0.6);
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    .entertaitment {
+        background-image: url('../../dist/images/navigation/entertaitment.jpg');
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        z-index: 50;
+        &::before {
+            background-color:  rgba(238, 241, 12, 0.6);
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
   }
 /*.header__nav {
     width: 100vw;
