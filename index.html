@@ -6,47 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Popular news</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body>
-    <div class="container">
 
-        <header id="header" class="header" role="banner">
-            <div class="header__container">
-                <h1 class="header__title" rel="index">
-                    <a href="#" class="header__title-link" title="Strona główna">
-                        <img src="src/images/logo.png" alt="">
-                    </a>
-                </h1>
+    <header id="header" class="header" role="banner">
 
-                <nav class="header__nav" role="menu">
-                    <ul id="main-menu" class="nav__list">
-                        <li class="nav__list--item">
-                            <a href="#" class="nav--link" aria-label="">Start</a>
-                        </li>
-                        <li class="nav__list--item">
-                            <a href="#" class="nav--link" aria-label="">Start</a>
-                        </li>
-                        <li class="nav__list--item">
-                            <a href="#" class="nav--link" aria-label="">Start</a>
-                        </li>
-                        <li class="nav__list--item">
-                            <a href="#" class="nav--link" aria-label="">Start</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <div class="header__container">
 
-        <main id="main" class="content" role="main">
-            <div class="articles">
-                
-            </div>
-        </main>
-        <!--<div>Logo made with <a href="https://www.designevo.com/en/" title="Free Online Logo Maker">DesignEvo</a></div>-->
-    </div>
+            <h1 class="header__title" rel="index">
+                <a href="#" class="header__title-link" title="Strona główna">
+                    <img src="src/images/logo.png" alt="">
+                </a>
+            </h1>
+
+            <a class="hamburger" aria-label="menu" aria-expanded="false" aria-controls="main-menu" tabindex="1" role="button"
+                type="button" name="menu">Menu</a>
+
+            <nav class="header__nav" role="menu">
+                <ul id="main-menu" class="nav__list">
+                    <li class="nav__list--item">
+                        <a href="#" class="nav--link" aria-label="">Start</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav--link" aria-label="">Start</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav--link" aria-label="">Start</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav--link" aria-label="">Start</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main id="main" class="content" role="main">
+        <div class="articles">
+
+        </div>
+    </main>
+    <!--<div>Logo made with <a href="https://www.designevo.com/en/" title="Free Online Logo Maker">DesignEvo</a></div>-->
     <script type='text/javascript' src='src/scripts/index.js?v=" + Date.now() + "'></script>
-    </body>
+</body>
 
 </html>

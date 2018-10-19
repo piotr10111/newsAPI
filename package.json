@@ -22,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/piotr10111/newsAPI/issues"
   },
-  "homepage": "https://github.com/piotr10111/newsAPI#readme"
+  "homepage": "https://github.com/piotr10111/newsAPI#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "node-sass": "^4.9.4"
+  }
 }
