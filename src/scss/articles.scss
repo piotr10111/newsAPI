@@ -1,11 +1,21 @@
-.article__image {
-    max-width: 500px;
-    height: auto;
-    width: 100%;
-}
-
 .articles {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-
 }
+.articles__figure {
+    height: 300px;
+    width: 450px;
+    background-color: rgb(68, 68, 68);
+    position: relative;
+}
+.article__image {
+    height: 300px;
+    width: 450px;
+}
+.article-title {
+    position: absolute;
+    
+}
+
+

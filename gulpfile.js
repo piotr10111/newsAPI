@@ -6,13 +6,15 @@ const uglify = require('gulp-uglify');
 const htmlmin = require("gulp-htmlmin");
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const terser = require('gulp-terser');
+var pump = require('pump');
 
 
 sass.compiler = require('node-sass');
 
 const dist = 'dist'
 
-gulp.task('default', [ 'sass:watch','sass','html'])
+gulp.task('default', [ 'sass:watch','sass','html', 'script'])
 
 gulp.task('sass',  function() {
     return gulp.src('./src/scss/*.scss')
@@ -32,6 +34,15 @@ gulp.task('js', function(){
     .pipe(concat('main.js'))
     .pipe(gulp.dest(dist+'/js'));
 });
+
+gulp.task('script', function (cb) {
+    pump([
+      gulp.src('src/scripts/*.js'),
+      terser(),
+      concat('bundle.js'),
+      gulp.dest(dist+'/js')
+    ], cb);
+  });
 
 gulp.task('html', function() {
     return gulp.src('*.html')

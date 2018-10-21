@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/piotr10111/newsAPI#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-terser": "^1.1.5"
   },
   "dependencies": {
     "gulp-autoprefixer": "^6.0.0",
@@ -33,6 +34,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "node-sass": "^4.9.4"
+    "node-sass": "^4.9.4",
+    "pump": "^3.0.0"
   }
 }
