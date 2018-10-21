@@ -29,14 +29,15 @@ const reqFirst = fetch(apis[0])
                        <a href="${article.url}" target="_blank">
                            <img class="article__image" src="${article.urlToImage}" alt="">
                        </a>
+                       
+                       <figcaption class="article__figcaption">
+                            <a href="${article.url}" class="article__title" 
+                                <h3>${article.title}</h3>
+                            </a>
+                            <a class="article-author" rel="author">${article.source.name}</a>
+                       </figcaption>
                    </figure>
-                   <header>
-                       <a href="${article.url}" 
-                           <h3 class="article-title">${article.title}</h3>
-                       </a>
-                       <a class="article-author" rel="author">${article.source.name}</a>
-                   </header>
-                   <!--<p class="article-description">Description: ${article.description}</p>-->
+                    <!--<p class="article-description">Description: ${article.description}</p>-->
                </article>`;
        });
        

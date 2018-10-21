@@ -7,15 +7,57 @@
     height: 300px;
     width: 450px;
     background-color: rgb(68, 68, 68);
+    margin-right: 40px;
+    margin-top: 40px;
     position: relative;
+    overflow: hidden;
 }
 .article__image {
     height: 300px;
     width: 450px;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    opacity: .4;
 }
-.article-title {
-    position: absolute;
+.article__figcaption {
     
+    .article__title {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 22px;
+        z-index: 200;
+        position: absolute;
+        top: 70%;
+        left: 5px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+        color: white;
+        -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+        -webkit-transition: color 0.35s, -webkit-transform 0.35s;
+        transition: color 0.35s, -webkit-transform 0.35s;
+        transition: transform 0.35s, color 0.35s;
+        transition: transform 0.35s, color 0.35s, -webkit-transform 0.35s;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+
+    .article-author {
+        z-index: 200;
+        position: absolute;
+        top: 90%;
+        left: 5px;
+        color: rgb(144, 190, 230);
+        font-weight: bold;
+        font-size: 13px;
+    }
+
 }
+
 
 
