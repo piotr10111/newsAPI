@@ -12,6 +12,7 @@
 .header__logo {
     width: 110px;
     margin-top: -30px;
+    cursor: auto;
 }
 .header__nav {
     visibility: hidden;
@@ -56,9 +57,10 @@
 
     .header__sort-item {
         color: white;
-        font-weight: 500;
+        text-transform: uppercase;
+        font-weight: bold;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 19px;
         padding: 5px;
         &:hover ul{
             position: static;
@@ -83,11 +85,10 @@
                 list-style: none;
                 padding: 10px 20px;
                 background: #2B2B2B;
-                
+                font-size: 16px;
                 a {
                     color: white;
                     text-decoration: none;
-                    margin-top: -10px;
                 }
 
                 &:hover {

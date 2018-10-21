@@ -1,3 +1,7 @@
+function clear() {
+    document.querySelector('.articles').innerHTML = "";
+};
+
 const apis = [
     `https://newsapi.org/v2/top-headlines?country=pl&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
     `https://newsapi.org/v2/top-headlines?country=pl&category=business&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
@@ -5,6 +9,7 @@ const apis = [
     `https://newsapi.org/v2/top-headlines?country=pl&category=technology&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
     `https://newsapi.org/v2/top-headlines?country=pl&category=entertainment&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`
 ];
+
 
 /*Promise.all(apis.map(url =>
     fetch(url)
@@ -18,12 +23,11 @@ const reqFirst = fetch(apis[0])
         return resp.json()
     })
     .then(data => {
-        console.log(data)
         const news = data.articles;
-        
-        news.map( article => {
+
+        news.map(article => {
             const post = document.querySelector('.articles');
-           post.innerHTML += `
+            post.innerHTML += `
                <article class="article">
                    <figure class="articles__figure"> 
                        <a href="${article.url}" target="_blank">
@@ -39,8 +43,8 @@ const reqFirst = fetch(apis[0])
                    </figure>
                     <!--<p class="article-description">Description: ${article.description}</p>-->
                </article>`;
-       });
-       
+        });
+
     });
 
 
@@ -84,5 +88,3 @@ Promise.all([reqFirst, reqSecond, reqThird, reqFourth, reqFifth]).then(values =>
     sourceData["reqFifth"] = values[4];
     return sourceData;
 });
-
-
