@@ -64,7 +64,7 @@
 	background: rgba(0,0,0,.25);
 	margin: 0;
 	display: none;
-    overflow: auto;
+    overflow-y: scroll;
 	.nav__list {
 		
     		
@@ -75,7 +75,7 @@
             font-weight: bold;
             text-align: center;
             cursor: pointer;
-            padding: 82px;
+            padding: 8.5vh;
         }
  
         .nav--link {
