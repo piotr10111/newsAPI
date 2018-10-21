@@ -1,5 +1,5 @@
-const hamburger = document.querySelector(".hamburger");
-const menu = document.querySelector(".header__menu");
+const hamburger = document.querySelector(".menu-icon");
+const menu = document.querySelector(".menu");
 
 function toggleClass() {
 	hamburger.classList.toggle('active');
