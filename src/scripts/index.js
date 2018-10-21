@@ -9,8 +9,6 @@ const apis = [
     `https://newsapi.org/v2/top-headlines?country=pl&category=technology&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`,
     `https://newsapi.org/v2/top-headlines?country=pl&category=entertainment&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb`
 ];
-
-
 /*Promise.all(apis.map(url =>
     fetch(url)
         .then(resp => resp.json())
@@ -18,7 +16,8 @@ const apis = [
             console.log(data);
 })));*/
 
-const reqFirst = fetch(apis[0])
+function loadData(url) {
+    fetch(url)
     .then(resp => {
         return resp.json()
     })
@@ -46,45 +45,38 @@ const reqFirst = fetch(apis[0])
         });
 
     });
+}
+loadData(apis[0]);
 
 
-const reqSecond = fetch(apis[1])
-    .then(resp => {
-        return resp.json()
-    })
-    .then(data => console.log(data));
+const reqFirst = function() {
+    loadData(apis[1]);
+}
 
-const reqThird = fetch(apis[2])
-    .then(resp => {
-        return resp.json()
-    })
-    .then(data => console.log(data));
+const reqSecond = function() {
+    loadData(apis[2]);
+}
 
-const reqFourth = fetch(apis[3])
-    .then(resp => {
-        return resp.json()
-    })
-    .then(data => console.log(data));
+const reqThird = function() {
+    loadData(apis[3]);
+}
 
-const reqFifth = fetch(apis[4])
-    .then(resp => {
-        return resp.json()
-    })
-    .then(data => console.log(data));
+const reqFourth = function() {
+    loadData(apis[4]);
+}
 
 const sourceData = {
-    "reqFirst": {},
+    //"reqFirst": {},
     "reqSecond": {},
     "reqThird": {},
     "reqFourth": {},
     "reqFifth": {}
 };
 
-Promise.all([reqFirst, reqSecond, reqThird, reqFourth, reqFifth]).then(values => {
-    sourceData["reqFirst"] = values[0];
-    sourceData["reqSecond"] = values[1];
-    sourceData["reqThird"] = values[2];
-    sourceData["reqFourth"] = values[3];
-    sourceData["reqFifth"] = values[4];
+Promise.all([ reqFirst, reqSecond, reqThird, reqFourth]).then(values => {
+    sourceData["reqSecond"] = values[0];
+    sourceData["reqThird"] = values[1];
+    sourceData["reqFourth"] = values[2];
+    sourceData["reqFifth"] = values[3];
     return sourceData;
 });
