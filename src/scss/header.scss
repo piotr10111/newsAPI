@@ -2,11 +2,11 @@
     position: fixed;
     top:0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
     background-color: #2B2B2B;
     -webkit-transition: .2 ease-in;
     transition: .2 ease-in;
-    height: 95px;
+    height: 90px;
 }
 
 .header__logo {
@@ -49,6 +49,68 @@
     margin-left: auto;
   }
   
+  .header__sort-country {
+    margin-left: auto;
+    list-style: none;
+    margin-top: 32px;
+
+    .header__sort-item {
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 5px;
+        &:hover ul{
+            position: static;
+            bottom: 200px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .flag-icon {
+            width: 20px;
+        }
+
+        ul{
+            position: absolute;
+            left: 9999px;
+            opacity: 0;
+            transition: all .2s ease-in-out;    
+            -webkit-transition: all .2s ease-in-out;
+            margin-left: -40px;
+        
+            .list-item {
+                list-style: none;
+                padding: 10px 20px;
+                background: #2B2B2B;
+                
+                a {
+                    color: white;
+                    text-decoration: none;
+                    margin-top: -10px;
+                }
+
+                &:hover {
+                    background-color: rgb(109, 108, 108)
+                }
+            }
+          }
+
+         
+
+    }
+  }
+  
+  /*.header__list-n-list {
+      background: #1761A0;
+      padding: 20px 50px 20px 5px;
+      .list-item {
+          list-style: none;
+      }
+  
+  }*/
+
+
   .nav__list--item {
     color: black;
     text-align: center;

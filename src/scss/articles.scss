@@ -2,6 +2,9 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
 }
 .articles__figure {
     height: 300px;
@@ -26,7 +29,7 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 22px;
-        z-index: 200;
+        z-index: 20;
         position: absolute;
         top: 70%;
         left: 5px;
@@ -48,7 +51,7 @@
     }
 
     .article-author {
-        z-index: 200;
+        z-index: 100;
         position: absolute;
         top: 90%;
         left: 5px;

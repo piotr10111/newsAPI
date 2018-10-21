@@ -31,7 +31,7 @@ const reqFirst = fetch(apis[0])
                        </a>
                        
                        <figcaption class="article__figcaption">
-                            <a href="${article.url}" class="article__title" 
+                            <a href="${article.url}" class="article__title" target="_blank" 
                                 <h3>${article.title}</h3>
                             </a>
                             <a class="article-author" rel="author">${article.source.name}</a>
