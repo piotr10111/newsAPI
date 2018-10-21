@@ -2,7 +2,7 @@
 .hamburger {
     position: relative;
     top: 35px;
-    right: 10px;
+    right: 5px;
     margin-left: auto;
     width: 35px;
     height: 22px;
@@ -30,6 +30,12 @@
         transform: translateY(16px);
         width: 110%;
     }
+
+    &::focus {
+        .header__nav {
+            top: 0;
+        }
+    }
   }
 
   .header__button--close {
@@ -40,7 +46,7 @@
     background: transparent;
     position: absolute;
     top: 50px;
-    left: 10px;
+    left: 5px;
     margin-right: 17px;
     padding: 0;
     outline: 0;
@@ -66,3 +72,5 @@
   .fa-caret-down {
       color:rgb(207, 23, 23);
   }
+
+

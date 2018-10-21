@@ -1,143 +1,112 @@
-.header {
-    position: fixed;
-    top:0;
-    width: 100%;
-    z-index: 100;
-    background-color: #2B2B2B;
-    -webkit-transition: .2 ease-in;
-    transition: .2 ease-in;
-    height: 90px;
-}
-
-.header__logo {
-    width: 110px;
-    margin-top: -30px;
-    cursor: auto;
-}
-.header__nav {
-    visibility: hidden;
-    z-index: 100;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    position: absolute;
-    left: 0;
-    top:0 ;
-    opacity: 1;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, .1);
-    -webkit-transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    color: black;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+.menu-icon {
+    position: relative;
+    top: 35px;
+    right: 5px;
     margin-left: auto;
-  }
-  
-  .header__sort-country {
-    margin-left: auto;
-    list-style: none;
-    margin-top: 32px;
-
-    .header__sort-item {
-        color: white;
-        text-transform: uppercase;
-        font-weight: bold;
-        cursor: pointer;
-        font-size: 19px;
-        padding: 5px;
-        &:hover ul{
-            position: static;
-            bottom: 200px;
-            opacity: 1;
-            margin-top: 10px;
-        }
-
-        .flag-icon {
-            width: 20px;
-        }
-
-        ul{
-            position: absolute;
-            left: 9999px;
-            opacity: 0;
-            transition: all .2s ease-in-out;    
-            -webkit-transition: all .2s ease-in-out;
-            margin-left: -40px;
-        
-            .list-item {
-                list-style: none;
-                padding: 10px 20px;
-                background: #2B2B2B;
-                font-size: 16px;
-                a {
-                    color: white;
-                    text-decoration: none;
-                }
-
-                &:hover {
-                    background-color: rgb(109, 108, 108)
-                }
-            }
-          }
-
-         
-
-    }
-  }
-  
-  /*.header__list-n-list {
-      background: #1761A0;
-      padding: 20px 50px 20px 5px;
-      .list-item {
-          list-style: none;
-      }
-  
-  }*/
-
-
-  .nav__list--item {
-    color: black;
-    text-align: center;
-    list-style: none;
-    padding: 85px;   
-  }
-  .visible {
-      visibility: visible;
-  }
-  
-  .nav--link {
+	width: 2rem;
+	height: 1.5rem;
+	position: relative;
+    z-index: 2;
+    margin-right: 20px;
     color: white;
-    padding:  10px 20px;
-    border: 2px solid white;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    font-weight: 500;
-    
-  }
+	cursor: pointer;
+	
+	& &--bar-top,
+	& &--bar-middle,
+	& &--bar-bottom {
+		background: #fff;
+		height: 3px;
+		width: 2em;
+		margin: 5px 0;
+		display: block;
+		transition: all .25s;
+		position: absolute;
+	}
+	
+	& &--bar-top {
+		top: 0;
+	}
+	
+	& &--bar-middle {
+		top: 50%;
+	}
+	
+	& &--bar-bottom {
+		top: 100%;
+	}
+	
+	&.active &--bar-top,
+	&.active &--bar-bottom {
+		transform-origin: center;
+	}
+	
+	&.active &--bar-top {
+		transform: rotate(45deg);
+		top: 50%;
+	}
+	
+	&.active &--bar-middle {
+		opacity: 0;
+	}
+	
+	&.active &--bar-bottom {
+		transform: rotate(-45deg);
+		top: 50%;
+	}
+}
 
-  .nav__list {
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    transition: .5s;
+.menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.25);
+	margin: 0;
+	display: none;
+    overflow: auto;
+	.nav__list {
+		
+    		
+		.nav__list--item {
+			list-style: none;
+			font-size: 1.5rem;
+            display: block;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            padding: 82px;
+        }
+ 
+        .nav--link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 10px;
+            border: 1px solid white;
+            
+        }
+	}
+	
+	&.active {
+		display: block;
+	}
+	
+}
+
+@media (max-width: 360px) {
+    .nav--link {
+        font-size: 18px;
+    }
+}
+.nav__list {
+    position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		margin: 0;
+        padding: 0;
+        width: 100%;
+
     .top {
         background: url('../../dist/images/navigation/top.jpeg');
         position: relative;
@@ -229,5 +198,88 @@
             height: 100%;
             z-index: -1;
         }
+    }}
+.header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 100;
+    background-color: #2B2B2B;
+    -webkit-transition: .2 ease-in;
+    transition: .2 ease-in;
+    height: 90px;
+}
+
+.header__logo {
+    width: 110px;
+    margin-top: -30px;
+    cursor: auto;
+}
+  
+  .header__sort-country {
+    margin-left: auto;
+    list-style: none;
+    margin-top: 32px;
+  
+    .header__sort-item {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 19px;
+        padding: 5px;
+        &:hover ul{
+            position: static;
+            bottom: 200px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .flag-icon {
+            width: 20px;
+        }
+
+        ul{
+            position: absolute;
+            left: 9999px;
+            opacity: 0;
+            transition: all .2s ease-in-out;    
+            -webkit-transition: all .2s ease-in-out;
+            margin-left: -40px;
+        
+            .list-item {
+                list-style: none;
+                padding: 10px 20px;
+                background: #2B2B2B;
+                font-size: 16px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background-color: rgb(109, 108, 108)
+                }
+            }
+          }
+
+         
+
     }
   }
+  @media (max-width: 700px) {
+      .header__sort-country {
+        margin-left: -20px;
+        .header__sort-item {
+            font-size: 17px;
+        }
+      }
+  }
+  @media (max-width: 450px) {
+    .header__sort-country {
+      .header__sort-item {
+          font-size: 15px;
+          padding-right: 20px;
+      }
+    }
+}

@@ -16,7 +16,7 @@ function category(url) {
             news.map(article => {
                 const post = document.querySelector('.articles');
                 post.innerHTML += `
-               <article class="article">
+               <article class="article animated fadeIn">
                    <figure class="articles__figure"> 
                        <a href="${article.url}" target="_blank">
                            <img class="article__image" src="${article.urlToImage}" alt="">

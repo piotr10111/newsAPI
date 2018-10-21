@@ -1,0 +1,41 @@
+.footer {
+    background-color: #2B2B2B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+.footer__author {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0 0 10px 0;
+    font-size: 13px;
+}
+
+.fa-heart {
+    color: rgb(233, 40, 40);
+    margin: 0 5px;
+}
+.footer__copy {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer__credit {
+    text-align: center;
+    padding-top: 0px;
+    font-size: 13px;
+}
+
+.link__author {
+    text-decoration: none;
+    color: #1761A0;
+}
+
+@media (max-width: 600px) {
+    .footer__credit {
+        font-size: 11px;
+    }
+}
