@@ -1,76 +1,59 @@
 
-.hamburger {
+.menu-icon {
     position: relative;
     top: 35px;
     right: 5px;
     margin-left: auto;
-    width: 35px;
-    height: 22px;
-    border: 0;
-    border-top: 2px solid #fff;
-    background: transparent;
-    margin-right: 30px;
-    z-index: 200;
-    font-size: 0;
-    outline: 0;
-    cursor: pointer;
-
-    &:before,
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 80%;
-        border-top: 2px solid #fff;
-        transform: translateY(7px);
-    }
-
-    &:after{
-        transform: translateY(16px);
-        width: 110%;
-    }
-
-    &::focus {
-        .header__nav {
-            top: 0;
-        }
-    }
-  }
-
-  .header__button--close {
-    z-index: 111;
-    width: 40px;
-    height: 25px;
-    border: 0;
-    background: transparent;
-    position: absolute;
-    top: 50px;
-    left: 5px;
-    margin-right: 17px;
-    padding: 0;
-    outline: 0;
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-top: 2px solid #fff;
-        -webkit-transform: rotate(45deg) translateY(5px);
-                transform: rotate(45deg) translateY(5px);
-    }
-
-    &::after {
-        -webkit-transform: rotate(-45deg) translateX(-5px);
-                transform: rotate(-45deg) translateX(-5px);
-    }
-
-  }
-
-  .fa-caret-down {
-      color:rgb(207, 23, 23);
-  }
+	width: 2rem;
+	height: 1.5rem;
+	position: relative;
+    z-index: 2;
+    margin-right: 20px;
+    color: white;
+	cursor: pointer;
+	
+	& &--bar-top,
+	& &--bar-middle,
+	& &--bar-bottom {
+		background: #fff;
+		height: 3px;
+		width: 2em;
+		margin: 5px 0;
+		display: block;
+		transition: all .25s;
+		position: absolute;
+	}
+	
+	& &--bar-top {
+		top: 0;
+	}
+	
+	& &--bar-middle {
+		top: 50%;
+	}
+	
+	& &--bar-bottom {
+		top: 100%;
+	}
+	
+	&.active &--bar-top,
+	&.active &--bar-bottom {
+		transform-origin: center;
+	}
+	
+	&.active &--bar-top {
+		transform: rotate(45deg);
+		top: 50%;
+	}
+	
+	&.active &--bar-middle {
+		opacity: 0;
+	}
+	
+	&.active &--bar-bottom {
+		transform: rotate(-45deg);
+		top: 50%;
+	}
+}
 
 
