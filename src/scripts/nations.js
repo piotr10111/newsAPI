@@ -2,6 +2,7 @@ const poland = document.querySelector('.poland');
 const usa = document.querySelector('.usa');
 const germany = document.querySelector('.germany');
 const france = document.querySelector('.france');
+const england = document.querySelector('.england');
 
 function country(url) {
     clear();
@@ -33,16 +34,19 @@ function country(url) {
         })
 }
 
-poland.addEventListener('click', function() {
+poland.addEventListener('click', () => {
     country( `https://newsapi.org/v2/top-headlines?country=pl&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb` );
 })
-usa.addEventListener('click', function() {
+england.addEventListener('click', () => {
+    country( `https://newsapi.org/v2/top-headlines?country=gb&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb` );
+})
+usa.addEventListener('click', () => {
     country( `https://newsapi.org/v2/top-headlines?country=us&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb` );
 })
-germany.addEventListener('click', function() {
+germany.addEventListener('click', () => {
     country( `https://newsapi.org/v2/top-headlines?country=de&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb` );
 })
-france.addEventListener('click', function() {
+france.addEventListener('click', () => {
     country( `https://newsapi.org/v2/top-headlines?country=fr&apiKey=0f1d6f5ab7564ab09bc63df2a2fc6dcb` );
 })
 

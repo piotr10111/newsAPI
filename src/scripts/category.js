@@ -35,19 +35,19 @@ function category(url) {
         })
 }
 
-tops.addEventListener('click', function() {
+tops.addEventListener('click', () => {
     category(apis[0]);
 })
-business.addEventListener('click', function() {
+business.addEventListener('click', () => {
     category(apis[1]);
 })
-sport.addEventListener('click', function() {
+sport.addEventListener('click', () => {
     category(apis[2]);
 })
-tech.addEventListener('click', function() {
+tech.addEventListener('click', () => {
     category(apis[3]);
 })
-entertaitment.addEventListener('click', function() {
+entertaitment.addEventListener('click', () => {
     category(apis[4]);
 })
 

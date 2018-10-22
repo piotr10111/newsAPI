@@ -1,0 +1,38 @@
+.header__color-container {
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 650px) {
+    .header__color-container {
+       left: 15px;
+    }
+}
+.color-item {
+    width: 35px;
+    height: 35px;
+    background: black;
+    list-style: none;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.grey {
+    background: #2B2B2B;
+}
+.red {
+    background: #e55039;
+}
+.orange{
+    background: #f6b93b;
+}
+.blue{
+    background: #2980b9;
+}
+.green{
+    background: #27ae60;
+}

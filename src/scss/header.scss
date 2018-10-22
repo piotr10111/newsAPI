@@ -181,8 +181,9 @@
         .flag-icon {
             width: 20px;
         }
+   
 
-        ul{
+        .header__inside-ul{
             position: absolute;
             left: 9999px;
             opacity: 0;
@@ -203,12 +204,21 @@
                 &:hover {
                     background-color: rgb(109, 108, 108)
                 }
+            
+
             }
           }
-
+          
+        
          
 
     }
+  }
+  .list-item:focus .header__inside-ul {
+    display: none;
+}
+  .hide-ul {
+      visibility: hidden;
   }
   @media (max-width: 700px) {
       .header__sort-country {
@@ -226,3 +236,4 @@
       }
     }
 }
+

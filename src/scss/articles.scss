@@ -62,6 +62,7 @@
     }
 
 }
+
 @media (max-width: 520px) {
     .articles__figure {
         height: 250px;
@@ -75,17 +76,20 @@
     .articles__figure {
         height: 200px;
         width: 300px;
+        margin-left: 10px;
     }
 }
 @media (max-width: 360px) {
     .articles__figure {
-        height: 150px;
-        width: 250px;
+        height: 190px;
+        width: 265px;
+        margin-left: 50px;
     }
     .article__figcaption .article__title {
         font-size: 16px;
     }
 }
+
 
 
 

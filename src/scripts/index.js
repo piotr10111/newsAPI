@@ -49,19 +49,19 @@ function loadData(url) {
 loadData(apis[0]);
 
 
-const reqFirst = function() {
+const reqFirst = () => {
     loadData(apis[1]);
 }
 
-const reqSecond = function() {
+const reqSecond = () =>{
     loadData(apis[2]);
 }
 
-const reqThird = function() {
+const reqThird = () => {
     loadData(apis[3]);
 }
 
-const reqFourth = function() {
+const reqFourth = () => {
     loadData(apis[4]);
 }
 
