@@ -13,12 +13,16 @@ function country(url) {
         .then(data => {
             const news = data.articles;
             news.map(article => {
+
+            const urlImg = article.urlToImage;
+            url.substr(4, 10000).concat('https');
+            
                 const post = document.querySelector('.articles');
                 post.innerHTML += `
                <article class="article animated fadeIn">
                    <figure class="articles__figure"> 
                        <a href="${article.url}" target="_blank">
-                           <img class="article__image" src="${article.urlToImage}" alt="">
+                           <img class="article__image" src="${urlImg}" alt="">
                        </a>
                        
                        <figcaption class="article__figcaption">
